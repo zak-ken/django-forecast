@@ -1,0 +1,21 @@
+# forecast installation requirements
+#
+# Usage:
+#	1. Create a virtual environment
+#		virtualenv <path for virtual python environment>
+#   2. Activate the environment
+#		source <path for virtual python environment>/bin/activate
+#	3. Run pip install
+#  pip install -r requirements.txt
+#
+#  Sources for understanding how to configure this file
+#  https://pip.pypa.io/en/stable/reference/pip_install/#pip-install
+#  https://pip.readthedocs.org/en/1.1/requirements.html
+
+# Packages
+# requires python3.5
+pip install django==2.0
+pip install requests
+pip install djangorestframework
+
+# To update the
