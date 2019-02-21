@@ -1,4 +1,0 @@
-include LICENSE
-include README.rst
-recursive-include forecast/static *
-recursive-include forecast/templates *
