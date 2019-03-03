@@ -2,6 +2,12 @@
 # Argument list
 # $1: The virtual environment folder, defaults to vp
 
+# (Side Note) Starting a django project from scratch:
+# -> django-admin startproject ProjectName
+# Starting a django app
+# -> dajngo-admin startpapp AppName
+
+
 path=$(pwd)
 virt=$1
 usage=$'\nUsage: setup.sh <virtualenv path>'

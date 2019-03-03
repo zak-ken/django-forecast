@@ -49,6 +49,7 @@ def weather_list(request):
     """
         List all weather records.
     """
+    # TODO, Validate that only logged in users get to
     if request.method == 'GET':
         weather_obj = wheather.objects.all()
         serializer = wheatherSerializer(weather_obj, many=True)

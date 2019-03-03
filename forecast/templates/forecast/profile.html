@@ -5,14 +5,17 @@
 {% endblock %}
 
 {% block nav %}
-    <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Logged In Page</a></li>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+      <a class="navbar-brand" href="#">Home</a>
+
+      <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbarSupportedContent">
+          <ul class="navbar-nav text-right">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/forecast/logout">Logout</a>
+              </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-              <li><a href="/forecast/logout">Logout</a></li>
-          </ul>
-    </div>
+      </div>
+    </nav>
 {% endblock %}
 
 {% block body %}
