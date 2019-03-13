@@ -14,14 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.conf.urls.static import static
 from django.contrib import admin
+from django.conf import settings
 from myproject import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^forecast/', include('forecast.urls')),
-
-    url(r'^$', views.logged_out_redirect, name='logged_out_redirect'),
-    url(r'^forecast/$', views.logged_out_redirect, name='logged_out_redirect'),
+    url(r'^$', views.home, name='home'),
+    url(r'^forecast/$', views.home, name='home'),
 ]
 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

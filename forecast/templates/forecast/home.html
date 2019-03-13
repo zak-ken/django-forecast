@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div id="WeatherCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#WeatherCarousel" data-slide-to="0"></li>
+    <li data-target="#WeatherCarousel" data-slide-to="1"></li>
+    <li data-target="#WeatherCarousel" data-slide-to="2" class="active"></li>
+    <li data-target="#WeatherCarousel" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item" data-interval="5000">
+      {% load static %}
+      <img src="{% static 'forecast/media/carousel/winter.jpg' %}" class="d-block w-100" alt="winter-image">
+      <div class="carousel-caption d-none d-md-block">
+        <p><a class="btn btn-lg btn-primary winter-outline" href="#Winter" role="button">Winter Info.</a></p>
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      {% load static %}
+      <img src="{% static 'forecast/media/carousel/autumn.jpg' %}" class="d-block w-100" alt="autumn-image">
+      <div class="carousel-caption d-none d-md-block">
+        <p><a class="btn btn-lg btn-primary autumn-outline" href="#Autumn" role="button">Autumn Info.</a></p>
+      </div>
+    </div>
+    <div class="carousel-item active" data-interval="5000">
+      {% load static %}
+      <img src="{% static 'forecast/media/carousel/summer.jpg' %}" class="d-block w-100" alt="summer-image">
+      <div class="carousel-caption d-none d-md-block">
+        <p><a class="btn btn-lg btn-primary summer-outline" href="#Summer" role="button">Summer Info.</a></p>
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      {% load static %}
+      <img src="{% static 'forecast/media/carousel/spring.jpg' %}" class="d-block w-100" alt="spring-image">
+      <div class="carousel-caption d-none d-md-block">
+        <p><a class="btn btn-lg btn-primary spring-outline" href="#Spring" role="button">Spring Info.</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container marketing">
+  <hr class="featurette-divider">
+
+  <div class="row featurette" id="Autumn">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Autumn</h2>
+      <p class="lead">In autumn, or fall, temperatures start to drop resulting in plants growing dormant. Some animals start to prepare themselves for the winter that lies ahead by storing food and traveling to warmer areas. Many cultures celebrate the season due the harvests that they receive, for instance Thanksgiving for example is a historical commemoration but there is actually a link between this and the season, giving praise to what was given.</p>
+    </div>
+    <div class="col-md-5 head-line">
+      {% load static %}
+      <img src="{% static 'forecast/media/headline/autumn.jpg' %}" alt="Autumn" class="rounded">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette" id="Winter">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">winter</h2>
+      <p class="lead">Winter is coming! we’ll know when the white walkers are at walls when we feel the cold chill that winter brings. In Winter animals find ways to warm themselves, some even change their appearance to adapt or go into slumber for very long periods as a way to preserve energy, such as bears. In a similar theme to the autumn celebration, Winter Festivals is often celebrated as the return of light, this is due to the fact that during winter there are longer nights and shorter days. For instace the Indian festival of Diwali, between October and November celebrates the triumph of righteousness, and of light over darkness.</p>
+    </div>
+    <div class="col-md-5 order-md-1 head-line">
+      {% load static %}
+      <img src="{% static 'forecast/media/headline/winter.jpg' %}" alt="Winter" class="rounded">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette" id="Spring">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Spring</h2>
+      <p class="lead">In spring the seeds take root and vegetation begins to blossom. The weather is warmer resulting in animals waking or return from warmer climates, often with young offspring. The increased rainfall as well as the melting snow from the previous season provides the chance of flooding in water ways.</p>
+    </div>
+    <div class="col-md-5 head-line">
+      {% load static %}
+      <img src="{% static 'forecast/media/headline/spring.jpg' %}" alt="Spring" class="rounded">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette" id="Summer">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Summer</h2>
+      <p class="lead">In summer temperatures start to increase and rise to the hottest of the year. Often times droughts and heat waves occur  if the temp spikes too high, causing danger to people, animals and plants. One such scenario for example in  summer of 2003, the  extreme temperatures claimed more than 30,000 lives, according to Encyclopedia Britannica. Forest fires may become more frequent while rainfall may increase in some areas, as well.</p>
+    </div>
+    <div class="col-md-5 order-md-1 head-line">
+      {% load static %}
+      <img src="{% static 'forecast/media/headline/summer.jpg' %}" alt="Summer" class="rounded">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="container">
+    <div class="col">
+      <h2>Login to view the current weather in your area.</h2>
+      <p>Or do a search on this <a href="#">page</a> to view your current weather conditions.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,8 +1,104 @@
-body {
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    height: 100%
     background-color: grey;
+}
+
+#page-container {
+    min-height: 100%
+}
+
+#page-main {
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+#footer{
+    background-color: #343a40;
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear: both;
 }
 
 #navbar {
     //background-color: #117bf3;
     background-color: black;
+}
+
+
+.carousel-inner{
+    height: 800px;
+}
+
+.item, img{
+    height: 100% !important;
+    width:  100% !important;
+    border: 1px solid red;
+}
+
+
+.head-line{
+    height: 400px;
+}
+
+
+.btn-primary.winter-outline {
+    border: 2px solid #00a2ff;
+    color: #00a2ff;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-primary.winter-outline:hover {
+    border: 2px solid #00a2ff;
+    color: #ffffff;
+    background: #00a2ff;
+}
+
+
+.btn-primary.autumn-outline {
+    border: 2px solid #901a1a;
+    color: #f13535;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-primary.autumn-outline:hover {
+    border: 2px solid #d02323;
+    color: #ffffff;
+    background: #c51a1a;
+}
+
+.btn-primary.summer-outline {
+    border: 2px solid #ff9500;
+    color: #c39037;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-primary.summer-outline:hover {
+    border: 2px solid #ca8e14;
+    color: #ffffff;
+    background: #c57c0f;
+}
+
+
+.btn-primary.spring-outline {
+    border: 2px solid #0cf79c;
+    color: #25f965;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-primary.spring-outline:hover {
+    border: 2px solid #29ff2c;
+    color: #ffffff;
+    background: #0fc53e;
 }

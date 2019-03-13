@@ -1,44 +1,62 @@
 <html>
-    <head>
-        <!--{% load static %}-->
-      <link rel="stylesheet" href="{% static 'forecast/css/style.css' %}" type="text/css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'forecast/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    {% load static %}
+    <link rel="shortcut icon" type="image/ico" href="{% static 'forecast/media/favicon.ico' %}">
 
-      {% block head %}
-      <meta charset="UTF-8">
-      <title>Forecast</title>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Forecast</title>
 
-      {% endblock %}
-    </head>
+    {% endblock %}
+  </head>
 
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% block nav %}
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
-        <a class="navbar-brand" href="/forecast/logout">Home</a>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end fixed-top">
+
+        <a class="navbar-brand" href="{% url 'forecast:home' %}">Home</a>
+        {% load static %}
 
         <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav text-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/forecast/login">Login</a>
+                    <a class="nav-link" href="{% url 'forecast:login' %}">Login</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/forecast/register">Sign Up</a>
+                    <a class="nav-link" href="{% url 'forecast:register' %}">Sign Up</a>
                 </li>
             </ul>
         </div>
       </nav>
     {% endblock %}
 
-  <body>
-    {% block body %}
-    {% endblock %}
-  </body>
+    <div id="page-container">
+      <div id="page-main">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
 
+    <footer id="footer">
+      <hr>
+      <center>
+          <ul class="list-inline">
+            <li><a href="https://github.com/zak-ken/django-forecast">Fork This On GitHub</a></li>
+          </ul>
+      </center>
+    </footer>
+
+  </body>
 </html>
 
 

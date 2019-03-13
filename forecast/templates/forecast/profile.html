@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block nav %}
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
-      <a class="navbar-brand" href="#">Home</a>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end fixed-top">
+      <a class="navbar-brand" href="{% url 'forecast:home' %}">Home</a>
 
       <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbarSupportedContent">
           <ul class="navbar-nav text-right">
               <li class="nav-item active">
-                  <a class="nav-link" href="/forecast/logout">Logout</a>
+                  <a class="nav-link" href="{% url 'forecast:home' %}">Logout</a>
               </li>
           </ul>
       </div>
@@ -20,11 +20,11 @@
 
 {% block body %}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<!--{% load static %}-->
+{% load static %}
 <script type="text/javascript" src="{% static 'forecast/js/weather.js' %} "></script>
 
 <div class="container">
     <div id="Data_Table_Cont">
-        </div>
+    </div>
 </div>
 {% endblock %}
